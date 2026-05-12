@@ -100,7 +100,7 @@ export default function AdminPaymentsPage() {
                        player.payment_status === 'confirmed' ? '✅ Confirmado' : '❌ Rechazado'}
                     </span>
                   </div>
-                  <div className="text-gray-400 text-sm mt-1">{player.email}</div>
+                  <div className="text-gray-400 text-sm mt-1"><span className="text-xs">{player.username}</span></div>
                   <div className="text-sm mt-1 space-y-0.5">
                     {player.phone && <span className="text-gray-500 mr-3">📱 {player.phone}</span>}
                     {player.city && <span className="text-gray-500 mr-3">📍 {player.city}</span>}
