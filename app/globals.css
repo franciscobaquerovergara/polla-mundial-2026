@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --wc-green: #006633;
+  --wc-gold: #C9A84C;
+}
+
+body {
+  background-color: #080c10;
+  color: #f1f5f9;
+  font-family: 'Inter', sans-serif;
+}
+
+.card {
+  @apply bg-gray-900 border border-gray-800 rounded-xl;
+}
+
+.btn-primary {
+  @apply bg-green-600 hover:bg-green-500 text-white font-semibold px-4 py-2 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.btn-secondary {
+  @apply bg-gray-700 hover:bg-gray-600 text-white font-semibold px-4 py-2 rounded-lg transition-all duration-200;
+}
+
+.btn-gold {
+  @apply bg-yellow-600 hover:bg-yellow-500 text-white font-semibold px-4 py-2 rounded-lg transition-all duration-200;
+}
+
+.input-field {
+  @apply w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-all;
+}
+
+.score-input {
+  @apply w-16 bg-gray-800 border-2 border-gray-600 rounded-lg text-center text-2xl font-bold text-white p-2 focus:outline-none focus:border-green-500 transition-all;
+}
+
+.badge-pending   { @apply bg-yellow-900 text-yellow-300 text-xs px-2 py-1 rounded-full font-medium; }
+.badge-confirmed { @apply bg-green-900 text-green-300 text-xs px-2 py-1 rounded-full font-medium; }
+.badge-rejected  { @apply bg-red-900 text-red-300 text-xs px-2 py-1 rounded-full font-medium; }
+
+.stage-badge {
+  @apply text-xs font-semibold px-2 py-1 rounded-full;
+}
+
+.prediction-exact  { @apply bg-yellow-500 text-black; }
+.prediction-winner { @apply bg-green-700 text-white; }
+.prediction-miss   { @apply bg-gray-700 text-gray-400; }
+
+/* Animación de entrada */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-up { animation: fadeInUp 0.4s ease-out; }
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #111827; }
+::-webkit-scrollbar-thumb { background: #374151; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #4b5563; }
